@@ -46,7 +46,7 @@ CAMPAIGN_STRUCTURE = {
 def get_org_id(ctx: typer.Context):
     orgId = ctx.obj["config"].get("org_id")
     if not orgId:
-        typer.echo("Error: org_id not set. Please run `searchads configure`.")
+        typer.echo("Error: org_id not set. Please run `searchads config`.")
         raise typer.Exit(code=1)
     else:
         return orgId
@@ -63,7 +63,7 @@ def check_config_values(ctx: typer.Context):
 
     if missing_values:
         missing_values_str = ", ".join(missing_values)
-        message = f"Missing config value(s) for: {missing_values_str}\n\nRun searchads configure to set up"
+        message = f"Missing config value(s) for: {missing_values_str}\n\nRun searchads config to set up"
         raise typer.Exit(message)
 
     return True

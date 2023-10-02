@@ -354,7 +354,7 @@ def ask_budget(campaign_type: str) -> int:
     console = Console()
 
     default_budgets = {
-        CampaignType.exact: 20,
+        CampaignType.exact: 40,
         CampaignType.discovery: 10,
         CampaignType.competitor: 10,
     }
