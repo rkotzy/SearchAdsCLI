@@ -2,6 +2,9 @@
 
 SearchAdsCLI is a command line interface for setting up Apple Search Ads campaigns and does the heavy lifting around adding new keywords in a three campaign structure.
 
+# Overview
+[![Setting up Apple Search Ads Advanced Campaigns using the Search Ads CLI](http://img.youtube.com/vi/NJm0vWoQt_s/0.jpg)](https://www.youtube.com/watch?v=NJm0vWoQt_s "Setting up Apple Search Ads Advanced Campaigns using the Search Ads CLI")
+
 # Quickstart
 
 1. Set up Apple Search Ads account create an API user
@@ -125,6 +128,10 @@ This will add exact matches for the word in your Competitor Campaign but will NO
 ## Negative Keywords
 
 If there are keywords you want to prevent from ever bidding against, you can add these as negative keywords through SearchAdsCLI. Adding a negative keyword will prevent any of your campaigns from bidding against these keywords unless added back through `add-keywords`.
+
+```bash
+searchadscli add-negative-keywords
+```
 
 # Campaign management
 
