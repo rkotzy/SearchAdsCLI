@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "searchads"
 version = "0.1.0"
-description = ""
+description = "A CLI for running Apple Search Ads Advanced campaigns."
 authors = ["rkotzy <yolo@ryan.wtf>"]
 readme = "README.md"
 
