@@ -1,10 +1,10 @@
 import typer
 from typing_extensions import Annotated
-from searchads.utils.config import get_config, check_config_values, CampaignType
-from searchads.commands.campaign import list_campaigns, create_campaigns
-from searchads.commands.keywords import add_keywords as add_keywords_cmd
-from searchads.commands.keywords import add_negative_keywords as add_negative_keywords_cmd
-from searchads.commands.configure import configure as configure_cmd
+from searchadscli.utils.config import get_config, check_config_values, CampaignType
+from searchadscli.commands.campaign import list_campaigns, create_campaigns
+from searchadscli.commands.keywords import add_keywords as add_keywords_cmd
+from searchadscli.commands.keywords import add_negative_keywords as add_negative_keywords_cmd
+from searchadscli.commands.configure import configure as configure_cmd
 
 
 app = typer.Typer(rich_markup_mode="rich")

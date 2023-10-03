@@ -5,10 +5,10 @@ SearchAdsCLI is a command line interface for setting up Apple Search Ads campaig
 # Quickstart
 
 1. Set up Apple Search Ads account create an API user
-2. pip install searchads
-3. searchads configure
-4. searchads setup-campaigns
-5. searchads add-keywords
+2. pip install searchadscli
+3. searchadscli configure
+4. searchadscli setup-campaigns
+5. searchadscli add-keywords
 6. Profit 🎉
 
 # Generate Search Ads API Key
@@ -39,15 +39,15 @@ openssl ec -in private-key.pem -pubout -out public-key.pem
 # Installation
 
 ```bash
-pip install searchads
+pip install searchadscli
 ```
 
 # Configure
 
-First, you’ll need to provide some configuration details so SearchAdsCLI can communicate with your Apple Search Ads account. Run `searchads config` and follow the prompts.
+First, you’ll need to provide some configuration details so SearchAdsCLI can communicate with your Apple Search Ads account. Run `searchadscli config` and follow the prompts.
 
 ```bash
-searchads config
+searchadscli config
 ```
 
 # Create Campaigns
@@ -62,7 +62,7 @@ This campaign structure is widely used, and even recommended by Apple ([ref](htt
 To begin creating campaigns, run the following command:
 
 ```bash
-searchads setup-campaigns
+searchadscli setup-campaigns
 ```
 
 ## Choose countries
@@ -107,7 +107,7 @@ After creating your campaigns, it’s a good idea to add some initial keywords. 
 To add keywords, run:
 
 ```bash
-searchads add-keywords
+searchadscli add-keywords
 ```
 
 You’ll be prompted to select which campaign you want to create the keywords in. This is useful if you’re running campaigns in different countries or regions and only want to add a keyword for a specific country/region.
@@ -117,7 +117,7 @@ You’ll be prompted to select which campaign you want to create the keywords in
 If you want to add competitor names to your Competitor Campaign, run the `add-keywords` command with a `competitor` parameter.
 
 ```bash
-searchads add-keywords --type competitor
+searchadscli add-keywords --type competitor
 ```
 
 This will add exact matches for the word in your Competitor Campaign but will NOT add a broad match for the term in your Discovery Campaign.
@@ -133,7 +133,7 @@ Your campaigns are up and running - now what? First and foremost, patience is ke
 ## 1. Leverage the Discovery Campaign
 
 - **New Keyword Ideas:** Regularly review the keywords from your Discovery Campaign. This campaign is designed to help you discover potential new keywords that are relevant to your app.
-    - **Adding Keywords:** If you find a new keyword from your Discovery Campaign that leads to a successful app installation, you should move it to your Exact Campaign. Use the command **`searchads add-keywords`** to add it.
+    - **Adding Keywords:** If you find a new keyword from your Discovery Campaign that leads to a successful app installation, you should move it to your Exact Campaign. Use the command **`searchadscli add-keywords`** to add it.
 
 ## 2. Optimize Your Keyword Bids
 

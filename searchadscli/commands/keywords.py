@@ -1,8 +1,8 @@
 import typer
-from searchads.utils.adgroups_api import get_adgroups
-from searchads.utils.config import get_org_id, CampaignType, CAMPAIGN_STRUCTURE, CAMPAIGN_PREFIX
-from searchads.utils.campaigns_api import find_active_campaigns
-from searchads.utils.keywords_api import (
+from searchadscli.utils.adgroups_api import get_adgroups
+from searchadscli.utils.config import get_org_id, CampaignType, CAMPAIGN_STRUCTURE, CAMPAIGN_PREFIX
+from searchadscli.utils.campaigns_api import find_active_campaigns
+from searchadscli.utils.keywords_api import (
     add_keywords_to_adgroup_api,
     remove_keywords_from_adgroup_api,
     add_negative_keywords_to_campaign_api,

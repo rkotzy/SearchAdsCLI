@@ -1,7 +1,7 @@
 import typer
 import re
 import os
-from searchads.utils.config import get_config, save_config
+from searchadscli.utils.config import get_config, save_config
 from rich.table import Table
 from rich.console import Console
 

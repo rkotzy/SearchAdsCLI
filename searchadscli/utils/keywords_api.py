@@ -1,7 +1,7 @@
 import typer
 import requests
-from searchads.utils.config import MatchType
-from searchads.utils.access_token import get_access_token
+from searchadscli.utils.config import MatchType
+from searchadscli.utils.access_token import get_access_token
 
 
 def add_keywords_to_adgroup_api(

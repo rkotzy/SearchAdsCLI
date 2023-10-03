@@ -6,7 +6,7 @@ authors = ["rkotzy <yolo@ryan.wtf>"]
 readme = "README.md"
 
 [tool.poetry.scripts]
-searchadscli = "searchads.main:app"
+searchadscli = "searchadscli.main:app"
 
 [tool.poetry.dependencies]
 python = "^3.11"
