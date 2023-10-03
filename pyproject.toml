@@ -1,12 +1,12 @@
 [tool.poetry]
-name = "searchads"
+name = "searchadscli"
 version = "0.1.0"
 description = "A CLI for running Apple Search Ads Advanced campaigns."
 authors = ["rkotzy <yolo@ryan.wtf>"]
 readme = "README.md"
 
 [tool.poetry.scripts]
-searchads = "searchads.main:app"
+searchadscli = "searchads.main:app"
 
 [tool.poetry.dependencies]
 python = "^3.11"
