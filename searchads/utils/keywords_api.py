@@ -1,7 +1,7 @@
 import typer
 import requests
-from utils.config import MatchType
-from utils.access_token import get_access_token
+from searchads.utils.config import MatchType
+from searchads.utils.access_token import get_access_token
 
 
 def add_keywords_to_adgroup_api(
@@ -91,7 +91,6 @@ def remove_negative_keywords_from_campaign_api(
     ctx: typer.Context,
     orgId: str,
     campaign_id: str,
-    adgroup_id: str,
     keywords: list[str],
 ):
     access_token = get_access_token(ctx)
@@ -115,7 +114,7 @@ def remove_negative_keywords_from_campaign_api(
 
     if keywords_response.status_code != 200:
         return keywords_response
-
+    
     keyword_ids = [item["id"] for item in keywords_response.json()["data"]]
 
     return requests.post(

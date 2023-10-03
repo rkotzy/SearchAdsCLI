@@ -1,10 +1,10 @@
 import typer
 from typing_extensions import Annotated
-from utils.config import get_config, check_config_values, CampaignType
-from commands.campaign import list_campaigns, create_campaigns
-from commands.keywords import add_keywords as add_keywords_cmd
-from commands.keywords import add_negative_keywords as add_negative_keywords_cmd
-from commands.configure import configure as configure_cmd
+from searchads.utils.config import get_config, check_config_values, CampaignType
+from searchads.commands.campaign import list_campaigns, create_campaigns
+from searchads.commands.keywords import add_keywords as add_keywords_cmd
+from searchads.commands.keywords import add_negative_keywords as add_negative_keywords_cmd
+from searchads.commands.configure import configure as configure_cmd
 
 
 app = typer.Typer(rich_markup_mode="rich")
@@ -23,7 +23,7 @@ def validate_campaign_type(value: CampaignType) -> CampaignType:
 
 @app.callback()
 def main(ctx: typer.Context):
-    """Apple Ads CLI: A simple CLI to interface with Apple Search Ads API."""
+    """Apple Search Ads CLI: A simple CLI to get started with Apple Search Ads Advanced."""
     config = get_config()
     ctx.ensure_object(dict)
     ctx.obj["config"] = config

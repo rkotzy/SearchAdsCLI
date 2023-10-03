@@ -1,8 +1,8 @@
 import typer
-from utils.adgroups_api import get_adgroups
-from utils.config import get_org_id, CampaignType, CAMPAIGN_STRUCTURE, CAMPAIGN_PREFIX
-from utils.campaigns_api import find_active_campaigns
-from utils.keywords_api import (
+from searchads.utils.adgroups_api import get_adgroups
+from searchads.utils.config import get_org_id, CampaignType, CAMPAIGN_STRUCTURE, CAMPAIGN_PREFIX
+from searchads.utils.campaigns_api import find_active_campaigns
+from searchads.utils.keywords_api import (
     add_keywords_to_adgroup_api,
     remove_keywords_from_adgroup_api,
     add_negative_keywords_to_campaign_api,
@@ -63,9 +63,9 @@ def add_keywords(ctx: typer.Context, type: CampaignType):
         remove_keywords_from_competitor(ctx, org_id, campaigns, keywords)
         add_keywords_to_discovery(ctx, org_id, campaigns, keywords)
     elif type == CampaignType.competitor:
-        add_keywords_to_competitor()
-        remove_keywords_from_exact()
-        add_keywords_to_discovery()
+        add_keywords_to_competitor(ctx, org_id, campaigns, keywords)
+        remove_keywords_from_exact(ctx, org_id, campaigns, keywords)
+        add_keywords_to_discovery(ctx, org_id, campaigns, keywords)
     else:
         console.print(f"[red]Unknown campaign type.[/red]")
         raise typer.Exit(code=1)
@@ -214,17 +214,6 @@ def add_keywords_to_discovery(
 ):
     add_keywords_to_campaign(ctx, org_id, campaigns, keywords, CampaignType.discovery)
     add_negative_keywords_to_campaign(
-        ctx, org_id, campaigns, keywords, CampaignType.discovery
-    )
-
-
-def remove_keywords_from_discovery(
-    ctx: typer.Context, org_id: str, campaigns: dict, keywords: list[str]
-):
-    remove_keywords_from_campaign(
-        ctx, org_id, campaigns, keywords, CampaignType.discovery
-    )
-    remove_keywords_from_campaign(
         ctx, org_id, campaigns, keywords, CampaignType.discovery
     )
 

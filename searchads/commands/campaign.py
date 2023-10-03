@@ -1,12 +1,12 @@
 import typer
-from utils.campaigns_api import (
+from searchads.utils.campaigns_api import (
     find_active_campaigns,
     pause_campaign,
     get_campaigns,
     create_campaign,
 )
-from utils.adgroups_api import create_adgroup
-from utils.config import get_org_id, CAMPAIGN_STRUCTURE, CampaignType
+from searchads.utils.adgroups_api import create_adgroup
+from searchads.utils.config import get_org_id, CAMPAIGN_STRUCTURE, CampaignType
 from rich.table import Table
 from rich.console import Console
 from rich.prompt import Prompt

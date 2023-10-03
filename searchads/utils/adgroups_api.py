@@ -1,7 +1,7 @@
 import typer
 import requests
 import datetime
-from utils.access_token import get_access_token
+from searchads.utils.access_token import get_access_token
 
 
 def create_adgroup(

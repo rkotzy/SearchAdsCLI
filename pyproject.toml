@@ -6,13 +6,14 @@ authors = ["rkotzy <yolo@ryan.wtf>"]
 readme = "README.md"
 
 [tool.poetry.scripts]
-searchads-cli = "searchads.main:app"
+searchads = "searchads.main:app"
 
 [tool.poetry.dependencies]
 python = "^3.11"
 typer = {extras = ["all"], version = "^0.9.0"}
 authlib = "^1.2.1"
 pycryptodome = "^3.18.0"
+requests = "^2.31.0"
 
 
 [build-system]

@@ -1,7 +1,7 @@
 import typer
 import requests
-from utils.access_token import get_access_token
-from utils.config import CAMPAIGN_PREFIX, CampaignType
+from searchads.utils.access_token import get_access_token
+from searchads.utils.config import CAMPAIGN_PREFIX, CampaignType
 
 
 def find_active_campaigns(
